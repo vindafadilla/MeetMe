@@ -1,0 +1,103 @@
+<acme-navbar-admin></acme-navbar-admin>	
+	
+<div class="container">
+	<div align="center">
+		<h1 class="h2"> {{guest.title}} </h1>
+		<p class="description"> {{guest.description}} </p>
+	</div>
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1" >
+			<div>
+			<h1 class="h4"> {{guest.lefttitle}} </h1>
+			<p class="subtitle"> {{guest.leftdesc}} </p>
+			</div>
+			<div layout="row" layout-align="center-center">
+				<div class="panel panel-default" align="center">
+					<h1> {{guest.eventname}} </h1>
+				</div>
+
+				<div class="col-md-6" align="center">
+					<h4>{{guest.stat}}</h4>
+				</div>
+				<div class="col-md-6">
+	            	<uib-alert type="{{participant.alertType}}" class="text-center"><span class="glyphicon" align="left"></span>{{guest.days + " days left"}}</uib-alert>
+				</div>
+	            <!-- <div>
+	            	<uib-alert template-url="alert.html" class="col-md-3">A happy alert!</uib-alert>
+	            </div> -->
+	             <div>
+                	<span class="glyphicon glyphicon-calendar" align="left">
+	                	{{guest.dateto}}
+	            </div>
+
+	           	<div>
+	                <span class="glyphicon glyphicon-calendar" align="left">
+	               		 {{guest.datefrom}}
+	            </div>
+                <div>
+                	<span class="glyphicon glyphicon-time" align="left">
+	                	{{guest.durafrom + " - " + guest.durato}}
+	            </div>
+	            <div>
+	            	<span class="glyphicon glyphicon-globe" align="left">
+	              	{{guest.gmt}}
+	            </div>
+	            <div class="panel panel-default" align="center">
+				<img src="assets/images/maps.png">
+			</div>
+			<br><br><br>
+	        </div>
+	        <div class="panel panel-default" align="center">
+				<img src="assets/images/meet2.jpg">
+				<h4>Desc</h4>
+				<div class="box"> {{guest.eventdesc}} </div>
+			</div>
+		</div>
+
+		<div class="col-md-6" style="border-left: 1px solid #b3b3b3">
+			<div>
+				<table>
+				    <tr>
+				        <td>
+				        	<br><br><br>
+				        	<br><br><br>
+				       		<h1 class="col-md-4 h3">Date</h1>
+				        	<uib-datepicker class="col-md-2" ng-model='guest.activeDate' multi-select='guest.selectedDates' select-range='{{guest.type=="range"}}'></uib-datepicker>
+				        </td>
+				        <td style='width:50px'>
+				        </td>
+				    </tr>
+				    <tr>
+				        <td>
+				        	<h1 class="h3">Time</h1>
+				        	<div class="col-md-4 col-md-offset-2">
+								<h4>From</h4>
+								<uib-timepicker class="col-md-offset-2"ng-model="guest.mytime" ng-change="guest.changed()" hour-step="guest.hstep" minute-step="guest.mstep" show-meridian="guest.ismeridian"></uib-timetpicker>
+							</div>
+							<div class="col-md-5 col-md-offset-1">
+								<h4>Until</h4>
+								<uib-timepicker ng-model="guest.mytime2" ng-change="guest.changed()" hour-step="guest.hstep" minute-step="guest.mstep" show-meridian="guest.ismeridian"></uib-timetpicker>
+							</div>
+				        </td>
+				    </tr>
+				</table>
+				<div class="col-lg-offset-8">
+					<button type="reset" class="btn btn-primary">Add</button>
+					<br><br><br>
+					<br><br><br>
+				</div>
+			</div>
+				<h1 class="h2"> {{guest.titlee}} </h1>
+				<p class="description"> {{guest.descriptionn}} </p>
+				<div ui-grid="{ data: guest.myData }" class="myGrid">
+			</div>
+			<div class="row">
+				<br>
+					<button type="reset" class="btn btn-primary col-md-offset-9">FINISH</button>
+			</div>
+		</div>
+	</div>
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaKjfipOWG8OYP2tyiVuW3D_qjvwXPPMU&callback=initMap"
+    async defer></script>-->
+</div>
+<acme-footer></acme-footer>

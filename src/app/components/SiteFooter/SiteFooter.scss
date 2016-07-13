@@ -1,0 +1,38 @@
+.site-footer {
+}
+
+
+.widget-title{
+	text-transform: uppercase;
+	margin-bottom: $padding-large-vertical*2;
+
+	&:after{
+		content :"";
+		display: block;
+		width: 67.5px;
+		padding-bottom: $padding-large-vertical;
+		border-width: 5px;
+		border-bottom:2px solid $gray-light;
+	}
+}
+
+.social-icon{
+	a{
+		display: inline-block;
+		padding-right: 25px;
+		color: $text-color;
+
+		&:hover{
+			color : $brand-primary
+		}
+	}	
+}
+
+
+.text-copyright{
+	margin-top: 100px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: $gray-lighter;
+	padding: $padding-large-vertical*2 0;
+}

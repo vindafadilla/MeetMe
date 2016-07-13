@@ -1,0 +1,25 @@
+<acme-navbar-admin></acme-navbar-admin>
+<div class="container">
+	<article class="content">
+		<div class="col-md-8 col-md-offset-2">
+				<uib-alert ng-repeat="alert in participant.alerts" type="{{alert.type}}" close="participant.closeAlert($index)" class="text-center"><span class="glyphicon glyphicon-bell"></span>{{alert.msg}}</uib-alert>
+			</br>
+			<h3 class="h4">{{participant.title}}</h3>
+			<a href="#/plannerdashboard"> Change to as Meeting Planner</a>
+			</br></br></br>
+			<div class="row">
+				<div>
+					<div ui-calendar class="span8 calendar" ng-model="participant.eventSources"></div>
+				</div>
+			</div></br>
+			<div class="row">
+				<h4 class="h5">{{participant.desc}}</h4>
+				<div>
+					<div ui-grid="participant.gridOptions" class="myGrid"></div>
+				</div>
+				<h5 class="h5"></h5>
+			</div>
+		</div>
+	</article>
+</div>
+<acme-footer></acme-footer>

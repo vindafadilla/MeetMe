@@ -1,0 +1,100 @@
+<acme-navbar-admin></acme-navbar-admin>
+	<div class="container">
+		<article class="content">
+		<div class="row">
+			<div class="col-md-6" >
+				<h2>{{invitation.lefttitle}}</h2>
+				<p><i>{{invitation.leftsubtitle}}</i></p>
+				<div>
+					<h1 align="center">{{invitation.eventtitle}}</h1>
+				</div>
+				<div>
+					<div class="col-md-5">
+						<h4>Event Status </h4>
+					</div>
+					<div class="col-md-1"><h4>:</h4></div>
+					<div class="col-md-6">
+						<uib-alert type="{{participant.alertType}}" class="text-center col-md-8">{{invitation.dayleft}}</uib-alert>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h4>
+							<span class="glyphicon glyphicon-time"></span>  {{invitation.from}} - {{invitation.to}}
+						</h4>
+					</div>
+					<div>
+						<h4>
+							<span class="glyphicon glyphicon-globe"></span>  {{invitation.location}}
+						</h4>
+					</div>
+				</div>
+				<div align="center" style="margin : 150px;">
+					Maps Comming Very Soon..
+				</div>
+					<div align="center">
+						<img src="app/invitation/image.jpg" width="50%" align="center">
+					</div>
+					<div>
+						<h1 align="center">Event Desc</h1>
+						<p align="center">
+							{{invitation.eventdesc}}
+						</p>
+					</div>
+			</div>
+
+			<div class="col-md-6" style="border-left : 2px solid #bfbfbf">
+
+				<div class="table">
+					<h2>Finalize Your Event</h2>
+					<h5>1. List of Participants</h5>
+					<div ui-grid="{ data: invitation.dataParticipants }" class="myGrid"></div>
+				</div>
+				
+				<div class="table">
+					<h5 class="h5">2. List of Plausible Time</h5>
+					<div ui-grid="{ data: invitation.dataPlausibleTimes }" class="myGrid"></div>
+				</div>
+
+				<div class="input-date">
+				<h5 class="h5">3. Maximal confirmation date and time </h5>
+
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="row">
+						    <div class="col-md-5">
+					<form class="form-inline">
+  					<div class="form-group">
+							<input type="text" class="form-control" uib-datepicker-popup="{{time.format}}" ng-model="time.dt" is-open="time.popup1.opened" datepicker-options="time.dateOptions" ng-required="true" close-text="Close" alt-input-formats="time.altInputFormats" />
+  					</div>
+  					<button type="button" class="btn btn-default" ng-click="time.open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+					</form>
+				</div>
+				<br>
+				<br>
+				<br>
+				<div class="input-date">
+				<h5 class="h5"><br>Time</h5>
+
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-6">
+							  <uib-timepicker class="col-md-offset-2"ng-model="time.mytime" ng-change="time.changed()" hour-step="time.hstep" minute-step="time.mstep" show-meridian="time.ismeridian"></uib-timepicker>
+						</div>
+						<div class="col-md-6">
+							  <uib-timepicker ng-model="time.mytime2" ng-change="time.changed()" hour-step="time.hstep" minute-step="time.mstep" show-meridian="time.ismeridian"></uib-timepicker>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+				<div align="right">
+				 		<button class="btn btn-primary btn-lg" ng-click="invitation.open()"> Cancel</button>
+				 		<a href="#/finalizeEvent" class="btn btn-primary btn-lg">Finalize Event</a>			 		
+				 </div>
+			</div>
+		</div>
+		</article>
+	</div>
+<acme-footer></acme-footer>

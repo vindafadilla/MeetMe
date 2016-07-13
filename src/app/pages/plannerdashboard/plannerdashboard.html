@@ -1,0 +1,27 @@
+<acme-navbar-admin></acme-navbar-admin>
+<div class="container">
+	<article class="content">
+		<div class="col-md-8 col-md-offset-2">
+				<uib-alert ng-repeat="alert in planner.alerts" type="{{alert.type}}" close="planner.closeAlert($index)" class="text-center"><span class="glyphicon glyphicon-bell"></span>{{alert.msg}}</uib-alert>
+			</br>
+			<h3 class="h4">{{planner.title}}</h3>
+			<a href="#/participantdashboard"> Change to as Participant</a>
+			</br></br></br>
+			<div class="row">
+				<div class="col-md-10">
+					<div ui-calendar class="span8 calendar" ng-model="planner.eventSources"></div> 
+					<!-- <uib-datepicker ng-model='activeDate' multi-select='selectedDates' select-range='true'></uib-datepicker> -->
+				</div>
+				<div class="col-md-2">
+					<a class="btn btn-primary" href="#/description">Create new event</a>
+				</div>
+			</div></br>
+			<div class="row">
+				<h4 class="h5">{{planner.desc}}</h4>
+				<div class="col-md-9"></div>
+				<div ui-grid="{data: planner.myData}" class="myGrid eventTable"></div>
+			</div>
+		</div>
+	</article>
+</div>
+<acme-footer></acme-footer>

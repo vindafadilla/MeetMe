@@ -1,0 +1,98 @@
+<acme-navbar-admin></acme-navbar-admin>
+
+<div class="container">
+    <div class="row">
+
+    <div class="add-participant">
+        <h2>Add Event's Participant</h2>
+
+        <h4 class="h4">1. Add manual using email</h4>
+
+        <div class="input-email">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" >
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">ADD</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+
+        <div class="h3">
+            or
+        </div>
+
+    </div>
+
+
+ <!-- Add From Google Contact List & Searching -->
+ <div id="custom-search-input">
+<h4 class="h4">{{addparticipant.title}}</h4>
+    
+    <input type="text" class="  search-query form-control" placeholder="Search"/>
+    <span class="input-group-btn">
+        <button class="btn btn-primary" type="button"> <span class=" glyphicon glyphicon-search"></span> </button>
+    </span>
+ </div>
+
+<div class="col-md-4"></div>
+<div ui-grid="addparticipant.gridParticipant" class="myGrid addpraticipant"></div><br>
+<div class="col-md-offset-11"><button class="btn btn-primary" type="button">ADD</button></div>
+
+</div>
+<!-- Input Date and Hour -->
+  <div class="input-date">
+				<div class="row">
+				<br><h4 class="h4">2. Maximal Confirmation Date</h4> <br>
+					<div class="col-md-10 col-md-offset-1">
+						<div class="row">
+						    <div class="col-md-5">
+					<form class="form-inline">
+  					<div class="form-group">
+							<input type="text" class="form-control" uib-datepicker-popup="{{addparticipant.format}}" ng-model="time.dt" is-open="addparticipant.popup1.opened" datepicker-options="addparticipant.dateOptions" ng-required="true" close-text="Close" alt-input-formats="addparticipant.altInputFormats" />
+  					</div>
+  					<button type="button" class="btn btn-default" ng-click="addparticipant.open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+					</form>
+				</div>
+						</div>
+					</div>
+					<br>
+
+					</div>
+				</div>
+				<div class="col-lf-5"><h4>Until</h4></div>
+<div class="input-date">
+				<div class="row">
+					<div class="col-md-3 col-md-offset-1">
+						<div class="col-md-6">
+							  <uib-timepicker class="col-md-offset-2"ng-model="addparticipant.mytime" ng-change="addparticipant.changed()" hour-step="addparticipant.hstep" minute-step="addparticipant.mstep" show-meridian="addparticipant.ismeridian"></uib-timepicker>
+						</div>
+					</div>
+				</div>
+</div>
+<!--List Event's Participant -->
+<div class="col-md-9"></div>
+ <div class="row">
+			<h4 class="h4">{{addparticipant.title2}}</h4>
+			{{addparticipant.desc}}
+			<div ui-grid="addparticipant.listEventParticipant" class="myGrid addpraticipant"></div><br>
+
+			<div class="col-md-offset-10">
+				<a href="#/addgroup" class="btn btn-primary">BACK</a>
+				<a href="#/invitation" class="btn btn-primary col-md-offset-1">FINISH</a>
+			</div>
+</div>
+<div class=col-md-offset-5>
+	<h4>Step 4 of 4</h4>
+	</div>
+<br><br>
+<div class="col-md-offset-3">
+<a href="#/description">General Description</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<a href="#/timeoptions">Time Options</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<a href="#/addgroup">Add Group</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<a href="#/addparticipant">Add Participant</a>
+</div>
+</div>
+<br>
+<br>
+<br>
+<acme-footer></acme-footer>

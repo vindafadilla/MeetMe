@@ -1,0 +1,84 @@
+<acme-navbar-admin></acme-navbar-admin>
+
+<div class="container">
+
+<article class="content">
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+
+			<div class="page-desc">
+				<h1 class="h2"> {{time.title}} </h1>
+				<p class="description"> {{time.description}} </p>
+			</div>
+			<form role="form" ng-submit="time.tambah_data()">
+			<div class="input-date">
+				<h2 class="h3">Date</h2>
+
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+
+						<div class="row">
+						    <div class="col-md-5">
+          					<h4>From</h4>
+                            <div class="input-group">
+                              <input type="text" class="form-control" uib-datepicker-popup="{{time.format}}" ng-model="time.timeoption.DateFrom" is-open="time.popup1.opened" datepicker-options="time.dateOptionsFrom" close-text="Close"/>
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="time.open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                              </span>
+                          </div>
+
+            				</div>
+
+						    <div class="col-md-5 col-md-offset-1">
+    							<h4>Until</h4>
+              					<div class="input-group">
+            						<input type="text" class="form-control" uib-datepicker-popup="{{time.format}}" ng-model="time.timeoption.DateTo" is-open="time.popup2.opened" datepicker-options="time.dateOptionsTo" close-text="Close" />
+                                    <span class="input-group-btn">
+                      					<button type="button" class="btn btn-default" ng-click="time.open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+			<div class="input-date">
+				<h2 class="h3">Time</h2>
+
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-6">
+							<h4>From</h4>
+							  <uib-timepicker class="col-md-offset-2" ng-model="time.timeoption.timeFrom" ng-change="time.changed()" hour-step="time.hstep" minute-step="time.mstep" show-meridian="time.ismeridian"></uib-timepicker>
+						</div>
+						<div class="col-md-6">
+							<h4>Until</h4>
+							  <uib-timepicker ng-model="time.timeoption.timeUntil" ng-change="time.changed()" hour-step="time.hstep" minute-step="time.mstep" show-meridian="time.ismeridian"></uib-timepicker>
+						</div>
+					</div>
+				</div>
+				<button class="col-md-offset-10 btn btn-primary">add</button>
+				</div>
+			</form>
+		<article class="content">
+			<h1 class="h2"> {{time.titlee}} </h1>
+			<p class="description"> {{time.descriptionn}} </p>
+			<div ui-grid="time.myData" class="myGrid">
+			</div>
+		</article>
+		<div class="button text-center">
+			    <a href="#/description" class="btn btn-primary">Back</a>
+			    <a href="#/addgroup" class="btn btn-primary">Next</a>
+		</div>
+		</div>
+	</div>
+</article>
+
+	<div class="text-center">
+		<h4>Step 2 of 4</h4>
+		<a href="#/description">General Description</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<a href="#/timeoptions">Time Options</a>
+	</div>
+</div>
+<acme-footer></acme-footer>

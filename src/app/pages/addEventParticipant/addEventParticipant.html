@@ -1,0 +1,64 @@
+<acme-navbar-admin></acme-navbar-admin>
+<div class="container">
+	<article class="content">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p>
+					<h4>Add Event's Participant</h4>
+					<p>1. Add from your Google Contact List</p>
+					</p>
+
+					<div>
+						<div ui-grid="eventParticipant.TableGoogleContact" ui-grid-selection ui-grid-edit ui-grid-cellNav class="grid" ui-grid-pagination></div>
+				 	</div>
+				</div>
+			</div>
+			<br><br>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p>2. Add manual using email</p>
+					<form class="form-inline">
+  					<div class="form-group">
+    					<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Add email here">
+  					</div>
+  					<button type="submit" class="btn btn-default">Add</button>
+					</form>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p>3. Maximal invite confirmation</p>
+					<form class="form-inline">
+  					<div class="form-group">
+							<label for="exampleInputEmail2">Until</label>
+							<input type="text" class="form-control" uib-datepicker-popup="{{eventParticipant.format}}" ng-model="eventParticipant.dt" is-open="eventParticipant.popup1.opened" datepicker-options="eventParticipant.dateOptions" ng-required="true" close-text="Close" alt-input-formats="eventParticipant.altInputFormats" />
+  					</div>
+  					<button type="button" class="btn btn-default" ng-click="eventParticipant.open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+					</form>
+				</div>
+			</div>
+			<br><br>
+			<hr>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p>
+					<h4>List Event's Participant</h4>
+					<p>List of participant you'll invited</p>
+					</p>
+
+					<div>
+						<div ui-grid="eventParticipant.TableProspectiveParticipant" class="grid" ui-grid-pagination></div>
+				 	</div>
+				</div>
+			</div>
+			<br><br>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-7">
+					<button type="button" class="btn btn-default">Back</button>
+					<button type="button" class="btn btn-default">Finish</button>
+				</div>
+			</div>
+	</article>
+</div>
+<acme-footer></acme-footer>

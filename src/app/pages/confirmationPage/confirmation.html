@@ -1,0 +1,107 @@
+<acme-navbar-admin></acme-navbar-admin>	
+
+<div class="col-md-12" style="border-bottom: 2px solid #bfbfbf" >	
+  <div class="container">
+	<div align="center">
+		<h1 class="h2"> {{confirmationPage.title}} </h1>
+		<p class="description"> {{confirmationPage.description}} </p>
+	</div>
+
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<div>
+			<h1 class="h3"> {{confirmationPage.lefttitle}} </h1>
+			<p class="subtitle"> {{confirmationPage.leftdesc}} </p>
+			</div>
+
+			<div layout="row" layout-align="center-center">
+				<div class="panel panel-default" align="center">
+					<h1> {{confirmationPage.eventname}} </h1>
+				</div>
+
+				<div class="col-md-6" align="center">
+					<h4>{{confirmationPage.stat}}</h4>
+				</div>
+				<div class="col-md-6">
+	            	<uib-alert type="{{participant.alertType}}" class="text-center"><span class="glyphicon" align="left"></span>{{confirmationPage.days + " days left"}}</uib-alert>
+				</div>
+
+	            <div>
+                	<span class="glyphicon glyphicon-calendar" align="left">
+	                	{{confirmationPage.dateto}}
+	            </div>
+
+	            
+
+                <div>
+                	<span class="glyphicon glyphicon-time" align="left">
+	                	{{confirmationPage.durafrom + " - " + confirmationPage.durato}}
+	            </div>
+
+	            <div>
+	            	<span class="glyphicon glyphicon-globe" align="left">
+	              	{{confirmationPage.gmt}}
+	            </div>
+	        </div>
+
+	        <div class="panel panel-default" align="center">
+				<img src="assets/images/maps.png">
+			</div>
+			<br><br><br>
+			<div>
+			<div class="panel panel-default" align="center"><!--ini adalah garis/border disebelah gambar-->
+				<img src="assets/images/meet2.png" width="50%" align="left">
+				<h4>Description</h4>
+				<div class="box" width="50%"> {{confirmationPage.formdesc}} </div>
+			</div>
+					<h1 class="h4"> {{confirmationPage.syncCalendar2}} <br></h1>
+			</div>
+		</div>
+
+		<div class="col-md-6" style="border-left: 1px solid #b3b3b3">
+			<h1 class="h2"> {{confirmationPage.titlee}} </h1>
+			<div>
+				<article class="content" class="col-md-5 col-md-offset-1">
+					<h1 class="h2"> {{confirmationPage.title2}} </h1>
+					<br><br><br>
+					<div class="col-md-offset-4"><button class="btn btn-primary">YES</button> <button class="btn btn-primary">NO</button>
+			</div>
+		</article>
+		</div>
+			<div>
+			<h1 class="h3"> {{confirmationPage.lefttitle1}} </h1>
+			<p class="subtitle"> {{confirmationPage.leftdesc1}} </p>
+			</div><br>
+
+
+			<div class="panel panel-default" align="center">
+				<img src="assets/images/jam.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 27/04/2016 - 15.00<br>
+			<div class="col-lf-offset-5">
+				<uib-alert type="{{participant.alertType}}" class="text-center"><span class="glyphicon" align="left"></span>{{confirmationPage.days + " days left to confirm"}}</uib-alert>
+			</div>
+			</div>
+			
+			<br><br><br>
+			<br><br>
+			
+		    		
+		    	
+			</div>
+	
+		
+
+		
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaKjfipOWG8OYP2tyiVuW3D_qjvwXPPMU&callback=initMap"
+    async defer></script>-->
+</div>
+</div>
+<div class="col-md-15">	
+  <div class="container">
+	
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaKjfipOWG8OYP2tyiVuW3D_qjvwXPPMU&callback=initMap"
+    async defer></script>-->
+</div>
+</div>
+
+
+<acme-footer></acme-footer>

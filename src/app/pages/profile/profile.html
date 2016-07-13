@@ -1,0 +1,138 @@
+<acme-navbar-admin></acme-navbar-admin>
+
+<div class="container">
+
+	<article class="content">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<h3>MeetMe Profile</h3>
+				<h6>you can edit profile such as e-mail, password, etc.</h6>
+				<br>
+				<!-- example route params -->
+				{{profile.userEmail}}
+	  	<div class="row">
+	  		<div class="col-md-12">
+			 	<div class="row">
+			 		<div class="col-md-4">
+			 			<div>
+							<!-- <img src="../../assets/images/Chandra.jpg" alt="" class="img-responsive img-rounded"> -->
+			 			</div>
+						<br>
+						<div class="form-group">
+							<input type="file" id="profileImage" ng-model="profileImageSrc"/>
+						</div>
+			 		</div>
+
+			 		<!-- form -->
+			 		<div class="col-md-8">
+			 			<form class="form-horizontal">
+						  <fieldset>
+
+						    <div class="form-group">
+						      <label for="inputName" class="col-lg-2 control-label">Name</label>
+						      <div class="col-lg-10">
+						        <input type="text" class="form-control" id="inputName" placeholder="Name">
+						        <form="{ data: profile.myData }">
+						      </div>
+						    </div>
+
+						    <div class="form-group">
+						      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+						      <div class="col-lg-10">
+						        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+						        <form="{ data: profile.myData }">
+						      </div>
+						    </div>
+
+						    <div class="form-group">
+						      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+						      <div class="col-lg-10">
+						        <button class="btn btn-primary btn-lg" ng-click="profile.open()">change</button>
+						        <form="{ data: profile.myData }">
+						      </div>
+						    </div>
+
+						    <div class="form-group">
+						      <label for="select" class="col-lg-2 control-label">Country</label>
+						      <div class="col-lg-10">
+						        <select class="form-control" id="select">
+						          <option ng-repeat="country in profile.country" value="{{country.value}}"> {{country.text}} </option>
+						        </select>
+						      </div>
+						    </div>
+
+
+						    <div class="form-group">
+						      <label for="select" class="col-lg-2 control-label">Gender</label>
+						      <div class="col-lg-10">
+						        <select class="form-control" id="select">
+						        	<option value="Male"><form="{ data: profile.myData }">Male</option>
+						        	<option value="female"><form="{ data: profile.myData }">Female</option>
+						        </select>
+						      </div>
+						    </div>
+
+							<div class="form-group">
+						      <label for="select" class="col-lg-2 icon-synchrone-calendar">
+										<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+									</label>
+						      <div class="col-lg-10 text-synchronize">
+						        <a href="#/">Synchronize calendar</a>
+						      </div>
+						    </div>
+						  </fieldset>
+						</form>
+			 		</div>
+			 	</div>
+
+	  		</div>
+	  	</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+				<div class="col-xs-12 col-md-10">
+				</div>
+				<div class="col-xs-6 col-md-2 col-md-pull-1">
+					<button class="btn btn-primary"> Save </button>
+				</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<h4>Connect your accounts</h4>
+				<p>Connect your accounts ! you can share your event plan.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-2 social-icon">
+				<a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+			</div>
+			<div class="col-md-4 col-md-pull-3">
+				<button class="btn btn-success"> Connect </button>
+			</div>
+		</div>
+		<div class="row sosmed-space">
+			<div class="col-md-4 col-md-offset-2 social-icon">
+				<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+			</div>
+			<div class="col-md-4 col-md-pull-3">
+				<button class="btn btn-success"> Connect </button>
+			</div>
+		</div>
+		<div class="row sosmed-space">
+			<div class="col-md-4 col-md-offset-2 social-icon">
+				<a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+			</div>
+			<div class="col-md-4 col-md-pull-3">
+				<button class="btn btn-success"> Connect </button>
+			</div>
+		</div>
+		<br>
+
+	</article>
+
+</div>
+
+<acme-footer></acme-footer>
