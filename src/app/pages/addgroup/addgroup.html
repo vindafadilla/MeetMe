@@ -2,33 +2,34 @@
 	<div class="container">
 		<article class="content">
 			<div class="row">
-
-				<div class="col-md-8 col-md-offset-2">
-
-					<h1>{{addgroup.title}}</h1>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-10">
+					<h2>{{addgroup.title}}</h2>
 					<p><i>{{addgroup.subtitle}}</i></p>
-					<h2 class="h5">{{addgroup.grouptitle}}</h2>
+					<h2>{{addgroup.grouptitle}}</h2>
 					<p><i>{{addgroup.subgrouptitle}}</i></p>
-
-					<div ui-grid="addgroup.gridOptions " class="myGrid"></div>
-
-					<div style="margin-top : 20px;">
-			 			<button ng-click="addgroup.addNew()" class="btn btn-primary">Add Group</button>
+			 		<h3>example table</h3>
+					<div ui-grid=" addgroup.gridOptions " ui-grid-edit class="myGrid"></div>
+			 		<div align="right" style="margin-top : 20px;">
+			 		<div align="left" style="margin-top : 10px;">
+			 			<button ng-click="addgroup.addNew()"> (+) Add Group</button>
 					</div>
 
-					<div class="text-center">
 			 			<a href="#/timeoptions" class="btn btn-primary btn-lg">Back</a>
-				 		<a href="#/addparticipant" class="btn btn-primary btn-lg">Next</a>
+				 		<a href="#/addparticipant" class="btn btn-primary btn-lg">Next</a>		
 			 		</div>
-
 				</div>
-
+				<div class="col-md-1">
+				</div>	 		
 			</div>
 		</article>
-
-		<div class="text-center">
-			<h4>Step 3 of 4</h4>
-			<a href="#/description">General Description</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<a href="#/timeoptions">Time Options</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<a href="#/addgroup">Add Group</a>
-		</div>
+		<div class=col-md-offset-5>
+	<h4>Step 3 of 4</h4>
+	</div>
+	<br><br>
+		<div class="col-md-offset-3">
+<a href="#/description">General Description</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<a href="#/timeoptions">Time Options</a>&nbsp;&nbsp;>>&nbsp;&nbsp;<a href="#/addgroup">Add Group</a>
+</div>
 	</div>
 <acme-footer></acme-footer>

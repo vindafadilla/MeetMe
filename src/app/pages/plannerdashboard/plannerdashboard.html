@@ -7,6 +7,7 @@
 			<h3 class="h4">{{planner.title}}</h3>
 			<a href="#/participantdashboard"> Change to as Participant</a>
 			</br></br></br>
+
 			<div class="row">
 				<div class="col-md-10">
 					<div ui-calendar class="span8 calendar" ng-model="planner.eventSources"></div> 
@@ -19,7 +20,7 @@
 			<div class="row">
 				<h4 class="h5">{{planner.desc}}</h4>
 				<div class="col-md-9"></div>
-				<div ui-grid="{data: planner.myData}" class="myGrid eventTable"></div>
+				<div ui-grid="planner.myData" class="myGrid eventTable"></div>
 			</div>
 		</div>
 	</article>

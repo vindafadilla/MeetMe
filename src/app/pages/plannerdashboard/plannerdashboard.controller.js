@@ -5,25 +5,34 @@
 		.module('meetme')
 		.controller('plannerDashboardController',plannerDashboardController);
 
-	function plannerDashboardController($log , $location, $routeParams, $route,timeoptions){
+	function plannerDashboardController($log , $location, $routeParams, $route,events){
 
 		var vm = this;
+		
+		vm.myData = {};
+		vm.myData.columnDefs = [
+			{name :'Date',type: 'date', cellFilter: 'date:\'MM/dd/yyyy\''},
+			{name : 'title'},
+			{ name : 'action',
+					cellTemplate:'<a href="asup.html">View Details</a>'}		//menampilkan hanya satu kolom
+		];	
 
-		vm.myData = timeoptions.query();
-		//vm.myData = {};
-
-		//vm.myData.columnDefs = [
-		//	{name : 'date'}];
-
-     	// instance objek
-    	vm.timeoption = new timeoptions();
+		vm.myData.data = events.query();
+		//	var finalJson = mergeJson({}, json0, json1);
+      // instance objek
+      vm.event = new events();
 
 		vm.tambah_data = function(){
-			timeoptions.save(vm.timeoption, function(){
+			events.save(vm.event, function(){
           	$route.reload();
         	});
 
 		};
+
+		
+
+
+
 
 		vm.title = "You have login as Meeting Planner";
 		vm.desc = "List of events that you created";
@@ -38,54 +47,13 @@
 		vm.gridOptions = {};
 
 		vm.gridOptions.columnDefs = [
-			{name : 'date'},
-			{name : 'time'},
-			{name : 'title'},
-			{name : 'status'},
-			{name: 'Menu',
-             cellTemplate:'<a href="#">View Details</a>'}
+			{name : 'title'}
 		];
 
-		vm.gridOptions.data = [
-			{
-				'date'	: "13/03/2016",
-				'time'	: '07:00',
-				'title'	: 'Kumpul Proyek',
-				'status': 'Urgent'
-			},
-			{
-				'date'	: "17/03/2016",
-				'time'	: '15:30',
-				'title'	: 'Kumpul Himpunan',
-				'status': 'Medium'
-			},
-			{
-				'date'	: "21/03/2016",
-				'time'	: '18:00',
-				'title'	: 'Rapat Koordinasi KEMA',
-				'status': 'Low'
-			}
-		];
+		vm.gridOptions.data = events.query();
+		
 
-
-		vm.eventSources = {
-			events : [
-				{
-					title : 'Event 1',
-					start : '2016-03-18'
-				},
-				{
-					title : 'Event 2',
-					start : '2016-03-20'
-				},
-				{
-					title : 'Event 3',
-					start : '2016-03-28'
-				}
-			],
-			color : 'red',
-			textColor : 'black'
-		};
+		vm.eventSources;
     }
 
 

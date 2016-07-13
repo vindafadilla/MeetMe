@@ -5,19 +5,18 @@
 		.module('meetme')
 		.controller('DescriptionController', DescriptionController);
 
-		function DescriptionController($log , $location, $routeParams, $route,events){
+		function DescriptionController($log , $location, $routeParams, $route,events,$cookies){
 		var vm = this;
 
 		vm.myData = events.query();
+
+		vm.single_post = events.get({"id": 1});   //mengambil satu object
 
       // instance objek
       vm.event = new events();
 
 		vm.tambah_data = function(){
-		events.save(vm.event, function(){
-			$route.reload();
-		});
-
+			$cookies.putObject("events", vm.event);
 		};
 
 		vm.open1 = function() {
@@ -29,11 +28,11 @@
 		};
 		vm.open3 = function() {
 		vm.popup3.opened = true;
-		};
+		};		
 
 
 		vm.title = "Event General Description";
-		vm.desc = "Add description for your event";
+		vm.desc = "Add description for your event"; 
 		vm.tinymceOptions = {
 			inline : false,
 			plugins : 'image',
