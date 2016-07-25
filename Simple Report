@@ -1,21 +1,30 @@
-# Simple Report
+#Log Senin, 25 Juli 2016
 
-Penjelasan tentang penggunaan Git
+Aktivitas yang telah dilakukan:
+1. Belajar dan latihan Golang web programming
+2. Memahami gin-gonic
 
-## Sekilas Git
+##Mengapa Memilih GoLang untuk WebApp?
 
-Pada dasarnya Git bekerja seperti sebuah  content tracker yang menyimpan histori sebuah  file  system  (direktori  dan  file)  dalam  bentuk  full  backup.  Hanya  saja,  kemudian  terbukti bahwa Git juga bisa digunakan sebagai SCM (  Source Code Management) sehingga Git menjadi sangat populer seperti saat ini.
+1. GoLang merupakan bahasa pemrograman yang open source tapi di back up oleh perusahaan yang besar seperti Google. GoLang berkembang dengan sangat cepat dan mendukung untuk teknologi cloud, ini juga alasan GoLang dipilih.
+2. Banyak perusahaan besar menggunakan GoLang untuk project mereka.
+3. Cepat. Untuk dipelajari, dikembangkan, di compile, di deploy, dan dijalankan.
+4. GoLang adalah modern language. GoLang mendukung untuk solusi modern, dengan kata lain, GoLang ke depannnya banyak mendukung untuk teknologi di masa depan. Contoh teknologi yang sekarang mendukung penggunaan GoLang adalah cloud.
+5. GoLang sangatlah simpel. GoLang mempunyai sintaks yang sederhana dengan workflow berbasis teks, desain yang minimalis, dan spesifikasi bahasa yang jelas.
+6.  Concurrent. Yang dapat memungkinkan dalam menjalankan banyak proses dalam waktu yang sama.
+7. Pengembangan yang cepat dan komunitas yang terus berkembang.
+8.  Mendukung cross-platform dengan baik.
+9. GoLang aman. Dalam Go , setiap variabel harus memiliki tipe yang terkait dengannya , sehingga pengembang harus teliti dan tidak dapat melewatkan rincian yang kemudian mungkin menyebabkan bug .
+10. Banyak open source library yang bagus untuk digunakan, yang dapat menambah library standard yang ada.
+11. Scalable, modular, maintainable, high-performance.
 
-Git  adalah  sistem  yang  terdistribusi  mirip jaringan  peer-to-peer.  Central  repository  hanya berfungsi  sebagai  perantara  dalam  proses  sinkronisasi.  Secara  teknis  kita  bisa  melakukan sinkronisasi langsung antar repositori tapi hal ini sangat tidak disarankan.
-
-## Cara Penggunaan Git
-
-Penggunaan Git
-
-* Jika anda ingin menggunakan repositori github agar project yang anda kerjakan dapat di develop oleh orang lain juga, maka anda harus membuat akun pada https://github.com/ .
-* Lalu, jika anda sudah membuat akun, anda dapat mendownload aplikasi git pada https://git-scm.com/downloads untuk memudahkan dalam pengelolaan project anda.
-* Setelah mengdownload git anda dapat menginstallnya pada device anda. Lebih jauh saya akan menjelaskan pembuatan repositori di github menggunakan Git Bash pada OS Windows.
-
-## Feedback
-
-https://github.com/chenzhiwei/chrome-markdown-editor
+##GoLang WebApp
+Aplikasi web/ web app adalah sebuah program komputer yang
+merespon sebuah http request oleh klien dan mengirimkan HTML kembali ke klien dalam HTTP response. 
+Yang telah dipelajari:
+1. Cara kerja WebApp
+2. Pengenalan singkat HTTP
+3. HTTP request 
+4. Request method di GoLang
+5. HTTP response
+6. Penggunaan GoLang di webApp: Hello Go (Hello World GoLang di webApp).
