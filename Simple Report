@@ -262,3 +262,4 @@ func main() {
 Hasilnya dapat dilihat di :  https://www.dropbox.com/s/qg7eg03rhywwjnn/GoLanghttp1.PNG?dl=0
 https://www.dropbox.com/s/xoe4f7xg8rxyu00/GoLanghttp2.PNG?dl=0
 
+#Jumat, 29 Juli 2016
